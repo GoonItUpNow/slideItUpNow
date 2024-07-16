@@ -95,7 +95,6 @@ function scaleWidth(fitHeight, height, width) {
 }
 
 export async function nextRedditSlides(remainingWidth, height) {
-    console.log("loading slides", redditFiles)
     let toAdd = [];
     let newRemainingWidth = remainingWidth;
     let indicesToRemove = [];
@@ -111,7 +110,6 @@ export async function nextRedditSlides(remainingWidth, height) {
     for (const i of indicesToRemove.reverse()) {
         redditFiles.splice(i, 1)
     }
-    console.log("done slides", redditFiles)
     if (redditFiles.length < 10) {
         loadNextPage()
     }
